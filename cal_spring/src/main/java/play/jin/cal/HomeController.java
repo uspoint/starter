@@ -33,7 +33,47 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
+		return "index";
+	}
+	
+	@RequestMapping(value="/darkadmin", method={RequestMethod.GET, RequestMethod.POST})
+	public String darkadmin(Locale locale, Model model){
+		return "/darkadmin/dark_index";
+	}
+	
+	@RequestMapping(value="/bsbinary", method={RequestMethod.GET, RequestMethod.POST})
+	public String bsbinary(Locale locale, Model model){
+		return "/bsbinary/main";
+	}
+	
+	@RequestMapping(value="/bsbinary/ui", method={RequestMethod.GET, RequestMethod.POST})
+	public String bsUi(){
+		return "/bsbinary/ui";
+	}
+	
+	@RequestMapping(value="/bsbinary/tab-panel", method={RequestMethod.GET, RequestMethod.POST})
+	public String bsTabPanel(){
+		return "/bsbinary/tab-panel";
+	}
+	
+	@RequestMapping(value="/bsbinary/chart", method={RequestMethod.GET, RequestMethod.POST})
+	public String bsChart(){
+		return "/bsbinary/chart";
+	}
+	
+	@RequestMapping(value="/bsbinary/table", method={RequestMethod.GET, RequestMethod.POST})
+	public String bsTable(){
+		return "/bsbinary/table";
+	}
+	
+	@RequestMapping(value="/bsbinary/form", method={RequestMethod.GET, RequestMethod.POST})
+	public String bsForm(){
+		return "/bsbinary/form";
+	}
+	
+	@RequestMapping(value="/bsbinary/blank", method={RequestMethod.GET, RequestMethod.POST})
+	public String bsBlank(){
+		return "/bsbinary/blank";
 	}
 	
 }
